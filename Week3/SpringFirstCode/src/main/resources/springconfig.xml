@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="st1" class="org.example.Student">
+
+    </bean>
+    <bean id="st2" class="org.example.Student" autowire="constructor">
+<!--        <property name="age" value="30"></property>-->
+<!--        <property name="rno" value="101"></property>-->
+<!--        <property name="writer" ref="pc1"></property> below construtor we setetrs injectors-->
+        <constructor-arg index="0" value="19">
+        </constructor-arg>
+        <constructor-arg index="1" value="1">
+                    </constructor-arg>
+<!--        <constructor-arg index="2" ref="writer">-->
+<!--        </constructor-arg>-->
+
+    </bean>
+    <bean id ="writer" class="org.example.Pen" primary="true">
+    </bean>
+    <bean id="pc1" class="org.example.Pencil">
+    </bean>
+    <!--<bean class="org.example.Teacher">
+        no use of teacher so commented
+   </bean>-->
+</beans>
