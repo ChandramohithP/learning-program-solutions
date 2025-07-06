@@ -15,7 +15,7 @@ public class App
 
     {
          ApplicationContext context=new AnnotationConfigApplicationContext(MyConfiguration.class);
-         Student st=(Student)context.getBean("s1");//cane give student too
+         Student st=(Student)context.getBean(Student.class);//cane give student too//field injection here used
           st.write_exam();
 
     }
